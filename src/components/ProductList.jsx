@@ -1,14 +1,14 @@
 import Card from "./Card";
 
-const BreedList = ({ searchParams }) => {
+const ProductList = ({ searchParams }) => {
   return (
-    <div className="grid grid-cols-2">
-      <FetchBreed searchParams={searchParams} />
+    <div className="grid grid-cols-5 gap-4 px-5">
+      <FetchProduct searchParams={searchParams} />
     </div>
   );
 };
 
-const FetchBreed = async ({ searchParams }) => {
+const FetchProduct = async ({ searchParams }) => {
   "use server";
   const { query } = await searchParams;
   const url = query ? `https://dummyjson.com/products/search?q=${query}` : "https://dummyjson.com/products";
@@ -18,18 +18,14 @@ const FetchBreed = async ({ searchParams }) => {
         "x-api-key": "https://dummyjson.com/products",
       },
     });
-    const breeds = await response.json();
+    const data = await response.json();
 
-    return breeds.map((products) => {
-      return (
-        <div key={products.id}>
-          <Card id={products.id} title={products.title} price={products.price} description={products.description} images={products.images} />
-        </div>
-      );
+    return data.products.map((product) => {
+      return <Card key={product.id} id={product.id} title={product.title} price={product.price} description={product.description} images={product.images[0]} />;
     });
   } catch (error) {
-    return <p>Failed to load breeds. Please try again later.</p>;
+    return <p>Failed to load products. Please try again later.</p>;
   }
 };
 
-export default BreedList;
+export default ProductList;
