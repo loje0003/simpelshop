@@ -1,10 +1,10 @@
-import Card from "@/components/Card";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
     <div>
-      <main>
-        <Card />
+      <main className="bg-blue-950 min-h-screen">
+        <Hero />
       </main>
     </div>
   );
