@@ -15,6 +15,7 @@ const Heading = () => {
           Products
         </Link>
       </div>
+      <hr />
     </div>
   );
 };
