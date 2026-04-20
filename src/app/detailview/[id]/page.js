@@ -4,9 +4,11 @@ import { Suspense } from "react";
 
 const DetailView = ({ params }) => {
   return (
-    <Suspense fallback={<div>Loading product details…</div>}>
-      <FetchProductDetail params={params} />
-    </Suspense>
+    <main className="min-h-screen bg-gray-50 py-5 px-10 md:px-12">
+      <Suspense fallback={<div>Loading product details…</div>}>
+        <FetchProductDetail params={params} />
+      </Suspense>
+    </main>
   );
 };
 
