@@ -20,11 +20,19 @@ const Category = () => {
   };
 
   return (
-    <div className="flex gap-4 p-4 mx-7">
-      <button onClick={() => handleFilter("Beauty")}>Beauty</button>
-      <button onClick={() => handleFilter("Groceries")}>Groceries</button>
-      <button onClick={() => handleFilter("Fragrances")}>Fragrances</button>
-      <button onClick={() => handleFilter("Furniture")}>Furniture</button>
+    <div className="flex items-center gap-4 ">
+      <button className="px-5 py-2 rounded-full border border-blue-950 bg-yellow-200 text-blue-950 text-xl font-medium cursor-pointer" onClick={() => handleFilter("Beauty")}>
+        Beauty
+      </button>
+      <button className="px-5 py-2 rounded-full border border-blue-950 bg-yellow-200 text-blue-950 text-xl font-medium cursor-pointer" onClick={() => handleFilter("Groceries")}>
+        Groceries
+      </button>
+      <button className="px-5 py-2 rounded-full border border-blue-950 bg-yellow-200 text-blue-950 text-xl font-medium cursor-pointer" onClick={() => handleFilter("Fragrances")}>
+        Fragrances
+      </button>
+      <button className="px-5 py-2 rounded-full border border-blue-950 bg-yellow-200 text-blue-950 text-xl font-medium cursor-pointer" onClick={() => handleFilter("Furniture")}>
+        Furniture
+      </button>
     </div>
   );
 };

@@ -13,8 +13,15 @@ const ProductList = ({ searchParams }) => {
 
 const FetchProduct = async ({ searchParams }) => {
   "use server";
-  const { query } = await searchParams;
-  const url = query ? `https://dummyjson.com/products/search?q=${query}` : "https://dummyjson.com/products";
+  const { query, category } = await searchParams;
+
+  var url = "https://dummyjson.com/products";
+
+  if (category) {
+    url = `https://dummyjson.com/products/category/${category}`;
+  } else if (query) {
+    url = `https://dummyjson.com/products/search?q=${query}`;
+  }
 
   try {
     const response = await fetch(url, {});

@@ -8,7 +8,10 @@ const List = ({ searchParams }) => {
     <div>
       <h1 className="text-7xl text-blue-950 mx-10 mt-5">All Products</h1>
       <div className="flex justify-between mr-30 mt-5">
-        <Category />
+        <Suspense fallback={<div>Loading categories…</div>}>
+          <Category />
+        </Suspense>
+
         <Search />
       </div>
       <Suspense fallback={<div>Loading products…</div>}>
