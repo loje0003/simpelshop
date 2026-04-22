@@ -42,9 +42,9 @@ const ProductDetail = ({ product, images, title }) => {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <Button className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">LÆG I KURV</Button>
+            <Button className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">Add to cart</Button>
 
-            <Button className="border border-gray-300 px-6 py-3 rounded-xl hover:bg-gray-100 transition">Tilbage</Button>
+            <Button className="border border-gray-300 px-6 py-3 rounded-xl hover:bg-gray-100 transition">Back</Button>
           </div>
         </div>
       </div>
