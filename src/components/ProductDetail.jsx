@@ -2,9 +2,11 @@
 
 import Image from "next/image";
 import Button from "./Button";
+import { useRouter } from "next/navigation";
 import { useCartStore } from "../store/cartStore";
 
 const ProductDetail = ({ product, images, title }) => {
+  const router = useRouter();
   const addToCart = useCartStore((state) => state.addToCart);
   return (
     <div className="space-y-8">
@@ -21,11 +23,13 @@ const ProductDetail = ({ product, images, title }) => {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <Button className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition" onClick={() => addToCart(product)}>
+            <Button className="bg-yellow-200 px-6 py-3 rounded-xl hover:bg-gray-100  transition" onClick={() => addToCart(product)}>
               Add to cart
             </Button>
 
-            <Button className="border border-gray-300 px-6 py-3 rounded-xl hover:bg-gray-100 transition">Back</Button>
+            <Button className="bg-yellow-200 px-6 py-3 rounded-xl hover:bg-gray-100 transition" onClick={() => router.back()}>
+              Back
+            </Button>
           </div>
         </div>
       </div>
