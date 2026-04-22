@@ -1,6 +1,6 @@
 "use client";
 
-import { useCartStore } from "../store/cartStore";
+import { useCartStore } from "../../store/cartStore";
 import Card from "@/components/Card";
 
 export default function CartPage() {
