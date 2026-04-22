@@ -1,7 +1,11 @@
+"use client";
+
 import Image from "next/image";
 import Button from "./Button";
+import { useCartStore } from "../app/store/cartStore";
 
 const ProductDetail = ({ product, images, title }) => {
+  const addToCart = useCartStore((state) => state.addToCart);
   return (
     <div className="space-y-8">
       <h1 className="text-7xl text-blue-950 mt-5">{product.title}</h1>
@@ -17,7 +21,9 @@ const ProductDetail = ({ product, images, title }) => {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <Button className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">Add to cart</Button>
+            <Button className="bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition" onClick={() => addToCart(product)}>
+              Add to cart
+            </Button>
 
             <Button className="border border-gray-300 px-6 py-3 rounded-xl hover:bg-gray-100 transition">Back</Button>
           </div>
