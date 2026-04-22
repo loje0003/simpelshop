@@ -6,7 +6,7 @@ const ProductDetail = ({ product, images, title }) => {
     <div className="space-y-8">
       <h1 className="text-7xl text-blue-950 mt-5">{product.title}</h1>
 
-      <div className="grid gap-10">
+      <div className="grid md:grid-cols-2 gap-10">
         <div className="relative w-full aspect-square bg-gray-100 rounded-2xl overflow-hidden">{images ? <Image src={images} alt={title} fill className="object-contain p-6" /> : <div className="flex items-center justify-center w-full h-full text-gray-500 text-sm">No image available</div>}</div>
 
         <div className="flex flex-col justify-between">

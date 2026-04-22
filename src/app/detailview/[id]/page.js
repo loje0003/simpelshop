@@ -1,4 +1,4 @@
-import ProductDetail from "@/components/DetailProduct";
+import ProductDetail from "@/components/ProductDetail";
 import Image from "next/image";
 import { Suspense } from "react";
 
