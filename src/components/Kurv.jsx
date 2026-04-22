@@ -1,9 +1,3 @@
-const Kurv = () => {
-  return (
-    <div>
-      <h1>hej</h1>
-    </div>
-  );
-};
+"use client";
 
-export default Kurv;
+export { useCartStore } from "@/store/cartStore";
