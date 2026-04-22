@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Button from "./Button";
-import { useCartStore } from "../app/store/cartStore";
+import { useCartStore } from "../store/cartStore";
 
 const ProductDetail = ({ product, images, title }) => {
   const addToCart = useCartStore((state) => state.addToCart);
