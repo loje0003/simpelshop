@@ -13,7 +13,7 @@ export default function CartPage() {
       <h1 className="text-7xl text-blue-950 mx-10 mt-5 mb-10">Shopping cart</h1>
 
       {cart.length === 0 ? (
-        <p>Kurven er tom</p>
+        <p className="text-3xl text-gray-700 mx-10 mt-5 mb-10">Kurven er tom</p>
       ) : (
         <div className="flex flex-wrap gap-4 ml-10">
           {cart.map((item) => (
