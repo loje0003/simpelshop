@@ -1,11 +1,9 @@
 "use client";
 
-const Kurv = () => {
-  return (
-    <div className="p-5">
-      <h2 className="text-3xl text-gray-700">Your cart is empty.</h2>
-    </div>
-  );
-};
+import { useCartStore } from "../store/cartStore";
 
-export default Kurv;
+export default function Kurv({ product }) {
+  const addToCart = useCartStore((state) => state.addToCart);
+
+  return <button onClick={() => addToCart(product)}>Add to cart</button>;
+}
