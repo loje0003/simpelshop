@@ -23,11 +23,11 @@ const ProductDetail = ({ product, images, title }) => {
           </div>
 
           <div className="flex gap-4 mt-8">
-            <Button className="bg-yellow-200 px-6 py-3 rounded-xl hover:bg-gray-100  transition" onClick={() => addToCart(product)}>
+            <Button className="bg-yellow-200 px-6 py-3  hover:bg-gray-100  transition" onClick={() => addToCart(product)}>
               Add to cart
             </Button>
 
-            <Button className="bg-yellow-200 px-6 py-3 rounded-xl hover:bg-gray-100 transition" onClick={() => router.back()}>
+            <Button className="bg-yellow-200 px-6 py-3 hover:bg-gray-100 transition" onClick={() => router.back()}>
               Back
             </Button>
           </div>
