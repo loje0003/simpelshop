@@ -29,8 +29,8 @@ export default function CartPage() {
           ))}
         </div>
       )}
-      <div className="ml-10 mt-50">
-        <Button>Checkout</Button>
+      <div>
+        <Button className="ml-10 mt-50 bg-yellow-200 px-6 py-3  hover:bg-gray-100 transition">Checkout</Button>
       </div>
     </div>
   );

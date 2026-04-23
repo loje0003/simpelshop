@@ -6,7 +6,7 @@ const Card = ({ id, title, price, description, images }) => {
     <div className="w-60 rounded-xl overflow-hidden shadow bg-white hover:shadow-lg transition">
       {/* Image */}
       <div className="relative w-full h-50">
-        <Link href={`/detailview/${id}`}>{images ? <Image src={images} alt={title} fill className="object-cover" /> : <div className="flex items-center justify-center w-full h-full text-sm">No image available</div>}</Link>
+        <Link href={`/detailview/${id}`}>{images && (Array.isArray(images) ? images[0] : images) ? <Image src={Array.isArray(images) ? images[0] : images} alt={title} fill className="object-cover" /> : <div className="flex items-center justify-center w-full h-full text-sm">No image available</div>}</Link>
       </div>
 
       <div className="p-3">
